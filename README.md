@@ -1,7 +1,7 @@
 # Real Estate Price Prediction – Custom Multi-Layer Perceptron (C#)
 
 Regression of Philippine house prices with the hand-written 3-layer MLP (`INeuron` / `HNeuron` / `ONeuron` / `NeuralNet`
-in namespace `Backprop`) from the previous activity. No external ML libraries are used.
+in namespace `Backprop`). No external ML libraries are used.
 
 ## How to run
 1. Open `RealEstatePricePredictionModel.slnx` in Visual Studio (Windows Forms, .NET Framework project).
@@ -11,7 +11,7 @@ in namespace `Backprop`) from the previous activity. No external ML libraries ar
    * **Train model** – final run with the chosen settings. Prints the loss every 50 epochs, draws the loss curve and the actual-vs-predicted plot, prints all metrics.
    * **Predict price** – estimate one listing with the trained model.
    * **Load weights...** – restore a saved `Results/model_weights.txt` instead of training again. The hidden-layer size is derived from the file; it prints the train/validation/test metrics, redraws the plot and enables **Predict price**. Select the **same dataset** the weights were trained on (the scalers are rebuilt from it with the fixed split seed).
-4. Output files go to the `Results/` folder in the project root (commit them to GitHub):
+4. Output files go to the `Results/` folder in the project root:
 
 | File | Content |
 |---|---|
