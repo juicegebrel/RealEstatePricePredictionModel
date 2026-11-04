@@ -56,12 +56,5 @@ Because a few listings cost hundreds of millions of pesos, squared errors in pes
 
 The train-vs-test gap shows over-fitting.
 
-## Results (fill in from your run)
-Paste the table from `Results/training_summary.txt` and the best row of `Results/tuning_summary.txt` here, plus a short analysis (which hyperparameters mattered, over/under-fitting, where the model fails - e.g. very expensive or lot-only listings).
-
-| Best config (hidden / lr / epochs) | Test RMSLE | Test R2 (ln) | Median error | Baseline RMSLE |
-|---|---|---|---|---|
-| | | | | |
-
 ## Project structure
 `Form1.cs` UI · `Trainer.cs` training loop · `ExperimentRunner.cs` grid search · `CsvHouseLoader.cs`, `FeatureEncoder.cs`, `MedianImputer.cs`, `MinMaxScaler.cs`, `TargetScaler.cs`, `DataPreparer.cs` data pipeline · `RegressionMetrics.cs` metrics · `ReportBuilder.cs`, `ResultsWriter.cs` output · `*ChartControl.cs` GDI+ charts · `BackNeural 1.cs`, `InputN 1.cs`, `HiddenN 1.cs`, `OuputN 1.cs` the neural-network classes.
