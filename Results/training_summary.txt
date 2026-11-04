@@ -1,0 +1,22 @@
+﻿Dataset: PH_Housing.csv
+
+=== FINAL RESULTS (hidden=8, learning rate=0.5, epochs=300, seed=1) ===
+Training time 0.5s. Lowest validation loss 0.002663 at epoch 298. Final loss: train 0.002445, validation 0.002982.
+
+Metric                           Train    Validation          Test   Test baseline
+RMSLE (ln price)                 0.577         0.616         0.564           1.308
+R-squared (ln price)             0.786         0.746         0.814           0.000
+Median abs % error                32.8          34.6          34.7            77.5
+Within +-25% (%)                  38.8          33.5          33.6            13.8
+MAPE (%)                          42.1          46.0          41.2           141.3
+RMSE (PHP)                  89,218,060    62,772,769    47,181,529      76,528,639
+MAE (PHP)                   18,670,277    16,688,413    16,626,935      28,842,241
+MSE (PHP^2)                   7.96e+15      3.94e+15      2.23e+15        5.86e+15
+R-squared (raw PHP)              0.348         0.331         0.586          -0.090
+
+--- Automatic interpretation ---
+ - Test RMSLE 0.564 vs 1.308 for the predict-the-typical-price baseline: a typical prediction is off by a factor of about 1.76x (baseline: 3.70x).
+ - R-squared (ln price) = 0.814: the model explains most of the price variation on unseen listings.
+ - Half of the test listings are predicted within 34.7% of the real price; 33.6% are within +-25%.
+ - Raw-peso RMSE (PHP 47,181,529) is much larger than the MAE (PHP 16,626,935) because a few extremely expensive listings dominate squared errors; this is why log-scale metrics are used for model selection.
+ - Test RMSLE is only 0.98x the training RMSLE: little overfitting.
